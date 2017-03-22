@@ -6,10 +6,18 @@
 	<title>Test</title>
 </head>
 <body>
-<p>232</p>
+<p>1</p>
+<p>2</p>
 <script src='../lib/K.js'></script>
 <script>
-	console.log(K);
+(function($){
+	var p = $('p');
+	var p2 = $(document.querySelector('p'));
+	p.addClass('ff');
+	console.log(p, p2);
+	window.p = p;
+	window.p2 = p2;
+})(K);
 </script>
 </body>
 </html>
