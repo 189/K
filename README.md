@@ -1,2 +1,2 @@
 # kQuery
-轻量级 DOM 操作类库。
+A fast, small and feature-rich javascript library for mobile browser
