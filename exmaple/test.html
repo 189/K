@@ -60,15 +60,12 @@
 
 	// callbacks.remove(fn2);
 	// callbacks.fire( "foobar" ); 
+	// 
+    var $boxs = $("div");
 
-})(K);
-
-window.onload = function() {
-    var boxs = document.getElementsByTagName("div");
-
-    // touchEvent.tap(boxs[0], function() {
-    //     alert("单次触摸");
-    // })
+    $boxs.eq(0).tap(function() {
+        alert("单次触摸");
+    })
 
     // touchEvent.doubleTap(boxs[1], function() {
     //     alert("两次触摸");
@@ -97,7 +94,9 @@ window.onload = function() {
     // touchEvent.swipeRight(document.body, function() {
     //     alert("向右滑屏了");
     // })
-}
+})(K);
+
+
 </script>
 </body>
 </html>
