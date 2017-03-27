@@ -6,11 +6,11 @@
 	<title>Test</title>
 	<style>
 	.box {
-	    width: 100px;
+	    width: 100%;
 	    height: 100px;
 	    line-height: 100px;
 	    margin-bottom: 10px;
-	    background: red;
+	    background: #333;
 	    text-align: center;
 	    color: #fff;
 	}
@@ -20,9 +20,9 @@
 <p>1</p>
 <p>2</p>
 
-<div class="box1 box">单次触摸我</div>
-<div class="box2 box">两次触摸</div>
-<div class="box3 box">长按我</div>
+<div class="box1 box">在此单击</div>
+<div class="box2 box">在此双击</div>
+<div class="box3 box">在此长按</div>
 
 <script src='../lib/K.js'></script>
 <script>
@@ -67,33 +67,33 @@
         alert("单次触摸");
     })
 
-    // touchEvent.doubleTap(boxs[1], function() {
+    // $boxs.eq(1).doubleTap(function() {
     //     alert("两次触摸");
     // })
 
-    // touchEvent.longTap(boxs[2], function() {
-    //     alert("长按");
-    // })
+    $boxs.eq(2).press(function() {
+        alert("长按");
+    })
 
-    // touchEvent.swipe(document.body, function() {
-    //     alert("滑屏了");
-    // })
+    $(document.body).swipe(function() {
+        alert("滑屏了");
+    })
 
-    // touchEvent.swipeUp(document.body, function() {
-    //     alert("向上滑屏了");
-    // })
+    $(document.body).swipeUp(function() {
+        alert("向上滑屏了");
+    })
 
-    // touchEvent.swipeDown(document.body, function() {
-    //     alert("向下滑屏了");
-    // })
+    $(document.body).swipeDown(function() {
+        alert("向下滑屏了");
+    })
 
-    // touchEvent.swipeLeft(document.body, function() {
-    //     alert("向左滑屏了");
-    // })
+    $(document.body).swipeLeft(function() {
+        alert("向左滑屏了");
+    })
 
-    // touchEvent.swipeRight(document.body, function() {
-    //     alert("向右滑屏了");
-    // })
+    $(document.body).swipeRight(function() {
+        alert("向右滑屏了");
+    })
 })(K);
 
 
